@@ -18,9 +18,39 @@ h2 {
     padding-left: 15px;
     padding-top: 15px;
 }
-p {
+h3{
+    color: #ffe602;
+    padding-left: 15px;
+}
+.description{
       padding: 20px;
 }
+
+article{
+    border: 1px solid #02ff02;
+    margin: 15px;
+    padding: 15px;
+    background-color: #333333;
+}
+article,p,h3 {
+   padding:10px 
+}
+.prices{
+    color: #02ff02;
+    font-weight: bold;
+    background-color: #032c03;
+    border: 1px solid #02ff02;
+    border-radius: 15px;
+    width: 60px;
+    margin: 10px;
+}
+
+.prices:hover{
+    background-color: #02ff02;
+    color: #000000;
+    cursor: pointer;
+}
+
 img{
         width: 100%;
          height: auto;
