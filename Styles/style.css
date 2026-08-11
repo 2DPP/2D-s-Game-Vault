@@ -1,0 +1,27 @@
+*{
+   margin: 0;
+    padding: 0;
+}
+body{
+
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+    color: #02ff02;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+h2 {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+p {
+      padding: 20px;
+}
+img{
+      margin: 0;
+    padding: 0;
+}
