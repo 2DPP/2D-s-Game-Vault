@@ -1,5 +1,5 @@
 *{
-  margin: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -7,7 +7,6 @@
     
 }
 body{
-
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
@@ -26,7 +25,6 @@ header{
 nav ul {
     list-style-type: none;
     margin-left:20%;
-   
     padding: 50px;
     display: flex;
    
@@ -44,8 +42,7 @@ nav a {
 nav a:hover {
     border-bottom: 2px solid #02ff02;
     color: #02ff02;
-    transform: scale(1.5);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .shop-tagline {
     flex: 1;
@@ -58,13 +55,62 @@ nav a:hover {
     padding-top: 15px; 
     text-shadow:  0px 0px  25px black, 0px 0px 5px white ;
 }
+.description{
+    font-size: 15pt;
+      padding: 20px;
+}
 nav {
     flex: 1;
     width: 100%;
     text-align: right;
 }
+main {
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    font-size: 15pt;
+   
+}
+article{
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    font-size: 15pt;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #02ff02b9;
+    background-color: #001f0775;
+}
+
+
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px; 
+  resize: vertical 
+}
+
+
+input[type=submit] {
+  background-color: #05c005;
+  border: 1px solid #e4cfcf;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color:#055805;
+}
+
+
 footer{
-     background-color: #08810817;
+    background-color: #08810817;
     color: #ffffff;
     text-align: center;
     padding: 10px;

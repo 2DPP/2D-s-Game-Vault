@@ -47,7 +47,6 @@ nav a {
 nav a:hover {
     border-bottom: 2px solid #02ff02;
     color: #02ff02;
-    transform: scale(1.5);
     transition: all 0.5s ease-in-out;
 }
 .shop-tagline {
@@ -67,8 +66,10 @@ nav {
     text-align: right;
 }
 main {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    height: 100%;
+    
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 main img{
     width: 100%;
