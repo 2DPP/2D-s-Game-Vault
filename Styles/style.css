@@ -1,6 +1,7 @@
 *{
    margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
 
@@ -8,13 +9,50 @@ body{
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
 }
-nav {
+header{
+    background-color: #1a1a1a;
+    border-bottom: 3px solid #02ff02;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px #02ff02ab;
     display: flex;
     justify-content: space-between;
+}
 
+nav ul {
+    list-style-type: none;
+    margin-left:20%;
+   
+    padding: 50px;
+    display: flex;
+   
+}
+nav li {
+    margin: 0 35px;
+}
+nav a {
+    font-size: 14pt;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+nav a:hover {
+    border-bottom: 2px solid #02ff02;
+    color: #02ff02;
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
+}
+.shop-tagline {
+    flex: 1;
+}
+nav {
+    flex: 1;
+    width: 100%;
+    text-align: right;
 }
 h1 {
     color: #02ff02;
+    font-size: 35pt;
     padding-left: 15px;
     padding-top: 15px;
 }
@@ -32,6 +70,7 @@ h3{
 
 article{
     border: 1px solid #02ff02;
+    border-radius: 15px;
     margin: 15px;
     padding: 15px;
     background-color: #333333;
@@ -45,7 +84,8 @@ article,p,h3 {
     background-color: #032c03;
     border: 1px solid #02ff02;
     border-radius: 15px;
-    width: 60px;
+    padding: 15px;
+    width: 90px;
     margin: 10px;
 }
 
@@ -58,4 +98,15 @@ article,p,h3 {
 img{
         width: 100%;
          height: auto;
+}
+
+footer{
+    background-color: #1a1a1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    border-top: 3px solid #02ff02;
+    box-shadow: 0px -4px 6px #02ff02ab;
+    text-shadow: 0px 0px 5px #02ff02ab;
 }
