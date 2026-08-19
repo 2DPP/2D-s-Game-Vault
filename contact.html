@@ -9,20 +9,50 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body>    
 
-    </header>
+    <header>
+   <div class="shop-tagline">  <h1>2D's Game Vault</h1>
+<p class="description">Games to play and enjoy! <b>Buy now!</b></p>
+</div>
     <nav>
-   <div class="column1">  <h1>2D's Game Vault</h1>
-<p class="description">Games to play and enjoy! <b>Buy now!</b></p></div>
-        <div class="column2"> 
     <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  </div>
-</nav>
+ </nav>
+
 </header>
+<main>
+<article>
+    <form action="action_page.php">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</article>
+
+</main>
+
+<footer>
+    <p>&copy; 2023 2D's Game Vault. All rights reserved.</p>
+</footer>
 </body>
 </html>

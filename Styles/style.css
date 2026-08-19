@@ -2,6 +2,8 @@
    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
 }
 body{
 
@@ -16,6 +18,8 @@ header{
     box-shadow: 0px 4px 15px #02ff02b9;
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
 }
 
 nav ul {
@@ -39,8 +43,7 @@ nav a {
 nav a:hover {
     border-bottom: 2px solid #02ff02;
     color: #02ff02;
-    transform: scale(1.5);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .shop-tagline {
     flex: 1;
@@ -96,15 +99,16 @@ h3{
       padding: 20px;
 }
 .prices{
-    font-size: 15pt;
+    font-size: 12pt;
     color: #02ff02;
     font-weight: bold;
     background-color: #032c03;
     border: 1px solid #02ff02;
     border-radius: 15px;
-    padding: 15px;
-    width: 90px;
+    padding: 20px;
+    width: 100px;
     margin: 10px;
+    
 }
 
 .prices:hover{
