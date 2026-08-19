@@ -10,10 +10,10 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 header{
-    background-color: #1a1a1a;
+    background-color: #08810817;
     border-bottom: 3px solid #02ff02;
     border-radius: 15px;
-    box-shadow: 0px 4px 6px #02ff02ab;
+    box-shadow: 0px 4px 15px #02ff02b9;
     display: flex;
     justify-content: space-between;
 }
@@ -44,41 +44,59 @@ nav a:hover {
 }
 .shop-tagline {
     flex: 1;
+
+}
+.shop-tagline h1 {
+    color: #02ff02;
+    font-size: 35pt;
+    padding-left: 15px;
+    padding-top: 15px; 
+    text-shadow:  0px 0px  25px black, 0px 0px 5px white ;
 }
 nav {
     flex: 1;
     width: 100%;
     text-align: right;
 }
-h1 {
-    color: #02ff02;
-    font-size: 35pt;
-    padding-left: 15px;
-    padding-top: 15px;
-}
-h2 {
-    padding-left: 15px;
-    padding-top: 15px;
-}
-h3{
-    color: #ffe602;
-    padding-left: 15px;
-}
-.description{
-      padding: 20px;
-}
 
+
+main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 article{
     border: 1px solid #02ff02;
     border-radius: 15px;
     margin: 15px;
     padding: 15px;
     background-color: #333333;
+    width: 95%;
+    
 }
 article,p,h3 {
    padding:10px;
 }
+h2 {
+    text-align: left;   
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 25pt;
+}
+h3{
+    color: #ffe602;
+    padding-left: 15px;
+    font-size: 20pt;
+}
+.description{
+    font-size: 15pt;
+      padding: 20px;
+}
 .prices{
+    font-size: 15pt;
     color: #02ff02;
     font-weight: bold;
     background-color: #032c03;
@@ -98,15 +116,18 @@ article,p,h3 {
 img{
         width: 100%;
          height: auto;
+         border-radius: 15px;
+         
 }
 
 footer{
-    background-color: #1a1a1a;
+     background-color: #08810817;
     color: #ffffff;
     text-align: center;
     padding: 10px;
     border-radius: 15px;
     border-top: 3px solid #02ff02;
-    box-shadow: 0px -4px 6px #02ff02ab;
+    box-shadow: 0px -4px 15px #02ff02b9;
     text-shadow: 0px 0px 5px #02ff02ab;
+    font-size: 12pt;
 }
