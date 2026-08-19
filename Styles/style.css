@@ -8,7 +8,11 @@ body{
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
 }
+nav {
+    display: flex;
+    justify-content: space-between;
 
+}
 h1 {
     color: #02ff02;
     padding-left: 15px;
