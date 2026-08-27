@@ -186,6 +186,66 @@ main th,
 main td {
     width: 41%;
     padding: clamp(0.65rem, 2vw, 1.15rem);
+
+.order-enquiry {
+    width: min(92%, 900px);
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem 1.5rem;
+    border: 1px solid #02ff02;
+    border-radius: 8px;
+    background-color: #0b260bd9;
+    box-shadow: 0 0 18px #02ff0233;
+}
+.order-enquiry h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.order-enquiry form {
+    display: grid;
+    gap: 0.75rem;
+}
+.order-enquiry input[type="number"],
+.order-enquiry input[type="email"] {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #02ff02;
+    border-radius: 4px;
+    background-color: #071407;
+    color: #ffffff;
+    font: inherit;
+}
+.order-enquiry fieldset {
+    display: grid;
+    gap: 0.65rem;
+    padding: 0.85rem 1rem 1rem;
+    border: 1px solid #0a710a;
+}
+.order-enquiry legend {
+    padding: 0 0.35rem;
+    color: #02ff02;
+    font-weight: bold;
+}
+.order-enquiry fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+.order-enquiry button {
+    justify-self: start;
+    padding: 0.75rem 1.1rem;
+    border: 1px solid #02ff02;
+    border-radius: 4px;
+    background-color: #0a710a;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+.order-enquiry button:hover,
+.order-enquiry button:focus-visible {
+    background-color: #02ff02;
+    color: #071407;
+}
     border: 1px solid #021d02;
     overflow-wrap: anywhere;
     vertical-align: top;
