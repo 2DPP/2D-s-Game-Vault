@@ -28,21 +28,28 @@
 <main>
 <article>
     <form action="#" method="post">
+    <fieldset>
+      <legend>Your details</legend>
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject">
+        <option value="product-question">Product question</option>
+        <option value="order-status">Order status</option>
+        <option value="wholesale-enquiry">Wholesale enquiry</option>
+        <option value="something-else">Something else</option>
+      </select>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Write your message.." minlength="10" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message.." minlength="10" required></textarea>
+    </fieldset>
 
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
+    <button type="submit">Send message</button>
 
   </form>
 </article>

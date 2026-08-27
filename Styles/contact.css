@@ -6,10 +6,10 @@
     scrollbar-width: thin;
 }
 body{
-
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
+    min-height: 100vh;
 }
 header{
     background-color: #08810817;
@@ -22,6 +22,7 @@ header{
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 nav ul {
@@ -99,46 +100,79 @@ nav {
       padding: 20px;
 }
 main {
-    width: 100%;
-    height: 100%;
-    padding: 100px;
-    font-size: 15pt;
-   
+        width: min(100%, 1100px);
+        margin: 0 auto;
+        padding: clamp(2rem, 7vw, 5rem) clamp(1rem, 5vw, 3rem);
+        font-size: 15pt;
 }
 article{
     width: 100%;
-    height: 100%;
-    padding: 100px;
+        padding: clamp(1.25rem, 5vw, 3.5rem);
     font-size: 15pt;
     border-radius: 15px;
     box-shadow: 0px 0px 20px #02ff02b9;
     background-color: #001f0775;
 }
 
+fieldset {
+        min-width: 0;
+        padding: clamp(1rem, 3vw, 2rem);
+        border: 1px solid #02ff02;
+        border-radius: 8px;
+}
 
-input[type=text], select, textarea {
-  width: 100%; 
-  padding: 12px; 
-  border: 1px solid #ccc; 
-  border-radius: 4px;
-  margin-top: 6px;
-  margin-bottom: 16px; 
-  resize: vertical 
+legend {
+        padding: 0 0.75rem;
+        color: #02ff02;
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+label {
+        display: block;
+        margin: 0.75rem 0 0.35rem;
+        font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #8c8c8c;
+    border-radius: 4px;
+    background-color: #101010;
+    color: #ffffff;
+    font: inherit;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+}
+
+textarea {
+    min-height: 9rem;
+}
+
+input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus {
+    outline: 2px solid #02ff02;
+    outline-offset: 2px;
+    border-color: #02ff02;
 }
 
 
-input[type=submit] {
+button[type=submit] {
   background-color: #05c005;
   border: 1px solid #e4cfcf;
   color: white;
-  padding: 12px 20px;
+    padding: 0.8rem 1.25rem;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 1.25rem;
 }
 
 
-input[type=submit]:hover {
+button[type=submit]:hover {
   background-color:#055805;
 }
 
@@ -153,4 +187,17 @@ footer{
     box-shadow: 0px -4px 15px #02ff02b9;
     text-shadow: 0px 0px 5px #02ff02ab;
     font-size: 12pt;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    article {
+        border-radius: 10px;
+    }
+    footer {
+        font-size: 0.75rem;
+    }
 }
