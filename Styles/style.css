@@ -12,7 +12,7 @@ body{
     font-family: 'Orbitron', sans-serif;
 }
 header{
-    background-color: #08810817;
+    background-color: #08810838;
     border-bottom: 3px solid #02ff02;
     border-radius: 15px;
     box-shadow: 0px 4px 15px #02ff02b9;
@@ -52,13 +52,36 @@ nav a:hover {
 
 }
 .shop-tagline h1 {
+    position: relative;
     color: #02ff02;
     font-size: 35pt;
     padding-left: 15px;
     padding-top: 15px; 
-    text-shadow:  0px 0px  25px black, 0px 0px 5px white ;
+    text-shadow: 0 0 3px #02ff02, 0 0 8px #02ff02, 0 0 16px #02ff02, 0 0 1px white;
+    animation: neon-flicker 4s infinite;
 }
-nav {
+.shop-tagline h1::before, .shop-tagline h1::after {
+    content: "2D's Game Vault"; position: absolute; inset: 15px 0 0 15px; pointer-events: none; opacity: 0;
+}
+.shop-tagline h1::before { color: #b6ff6a; animation: glitch-lime 4s infinite steps(1); }
+.shop-tagline h1::after { color: #005c31; animation: glitch-emerald 4s infinite steps(1); }
+@keyframes neon-flicker {
+    0%, 18%, 22%, 63%, 65%, 72%, 100% { opacity: 1; }
+    20%, 64%, 71% { opacity: 0.86; }
+}
+@keyframes glitch-lime {
+    0%, 88%, 92%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0 0 100% 0); }
+    89% { opacity: 0.45; transform: translate(-3px, 1px); clip-path: inset(20% 0 55% 0); }
+    91% { opacity: 0.45; transform: translate(3px, -1px); clip-path: inset(65% 0 15% 0); }
+}
+@keyframes glitch-emerald {
+    0%, 89%, 93%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0 0 100% 0); }
+    90% { opacity: 0.45; transform: translate(3px, -1px); clip-path: inset(45% 0 35% 0); }
+    92% { opacity: 0.45; transform: translate(-2px, 1px); clip-path: inset(10% 0 70% 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .shop-tagline h1, .shop-tagline h1::before, .shop-tagline h1::after { animation: none; }
+}nav {
     flex: 1;
     width: 100%;
     text-align: right;
