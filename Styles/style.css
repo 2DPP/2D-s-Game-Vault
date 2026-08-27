@@ -81,7 +81,8 @@ nav a:hover {
 }
 @media (prefers-reduced-motion: reduce) {
     .shop-tagline h1, .shop-tagline h1::before, .shop-tagline h1::after { animation: none; }
-}nav {
+}
+nav {
     flex: 1;
     width: 100%;
     text-align: right;
