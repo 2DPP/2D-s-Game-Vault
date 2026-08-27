@@ -57,6 +57,96 @@
     </tr>
 </table>
 
+<section class="order-enquiry">
+    <h2>Order Enquiry</h2>
+    <form action="#" method="post">
+        <div class="form-field">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="20" value="1" required>
+        </div>
+
+        <fieldset>
+            <legend>Copy format</legend>
+            <label for="physical-copy">
+                <input type="radio" id="physical-copy" name="copy-format" value="physical" required>
+                Physical copy
+            </label>
+            <label for="digital-copy">
+                <input type="radio" id="digital-copy" name="copy-format" value="digital">
+                Digital download
+            </label>
+        </fieldset>
+
+        <fieldset id="delivery-options">
+            <legend>Delivery method</legend>
+            <label for="standard-delivery">
+                <input type="radio" id="standard-delivery" name="delivery-method" value="standard" required>
+                Standard delivery
+            </label>
+            <label for="express-delivery">
+                <input type="radio" id="express-delivery" name="delivery-method" value="express">
+                Express delivery
+            </label>
+            <label for="store-pickup">
+                <input type="radio" id="store-pickup" name="delivery-method" value="pickup">
+                Store pickup
+            </label>
+        </fieldset>
+
+        <fieldset id="optional-extras">
+            <legend>Optional extras</legend>
+            <label for="gift-wrapping">
+                <input type="checkbox" id="gift-wrapping" name="extras" value="gift-wrapping">
+                Gift wrapping
+            </label>
+            <label for="express-handling">
+                <input type="checkbox" id="express-handling" name="extras" value="express-handling">
+                Express handling
+            </label>
+            <label for="personalised-note">
+                <input type="checkbox" id="personalised-note" name="extras" value="personalised-note">
+                Personalised note
+            </label>
+        </fieldset>
+
+        <div class="form-field">
+            <label for="contact-email">Contact email</label>
+            <input type="email" id="contact-email" name="contact-email" required>
+        </div>
+        <button type="submit">Send enquiry</button>
+    </form>
+</section>
+
+<script>
+    const formatOptions = document.querySelectorAll('input[name="copy-format"]');
+    const deliveryOptions = document.getElementById('delivery-options');
+    const deliveryInputs = deliveryOptions.querySelectorAll('input[name="delivery-method"]');
+    const extrasOptions = document.getElementById('optional-extras');
+    const extrasInputs = extrasOptions.querySelectorAll('input[name="extras"]');
+
+    function updateDeliveryOptions() {
+        const digitalSelected = document.getElementById('digital-copy').checked;
+        deliveryOptions.classList.toggle('is-disabled', digitalSelected);
+        extrasOptions.classList.toggle('is-disabled', digitalSelected);
+        deliveryInputs.forEach((input) => {
+            input.disabled = digitalSelected;
+            if (digitalSelected) {
+                input.checked = false;
+            }
+        });
+        extrasInputs.forEach((input) => {
+            input.disabled = digitalSelected;
+            if (digitalSelected) {
+                input.checked = false;
+            }
+        });
+    }
+
+    formatOptions.forEach((option) => {
+        option.addEventListener('change', updateDeliveryOptions);
+    });
+</script>
+
 
 </Main>
 <footer>

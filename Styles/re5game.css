@@ -214,7 +214,98 @@ main td {
 main th {
   background-color: #0a710ad5;
 }
-
+.order-enquiry {
+    width: min(92%, 900px);
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem 1.5rem;
+    border: 1px solid #02ff02;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0b260b, #061106 70%);
+    box-shadow: 0 0 18px #02ff0233, inset 0 0 24px #02ff0214;
+}
+.order-enquiry h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.order-enquiry form {
+    display: grid;
+    gap: 1rem;
+}
+.form-field {
+    display: grid;
+    gap: 0.4rem;
+}
+.form-field > label,
+.order-enquiry legend {
+    color: #b6ff6a;
+    font-weight: bold;
+    text-shadow: 0 0 5px #02ff02;
+}
+.order-enquiry input[type="number"],
+.order-enquiry input[type="email"] {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #0a710a;
+    border-radius: 4px;
+    outline: none;
+    background-color: #071407;
+    color: #ffffff;
+    font: inherit;
+}
+.order-enquiry input[type="number"]:focus,
+.order-enquiry input[type="email"]:focus {
+    border-color: #02ff02;
+    box-shadow: 0 0 10px #02ff0266;
+}
+.order-enquiry fieldset {
+    display: grid;
+    gap: 0.65rem;
+    padding: 0.85rem 1rem 1rem;
+    border: 1px solid #0a710a;
+    background-color: #07140780;
+}
+.order-enquiry legend {
+    padding: 0 0.35rem;
+}
+.order-enquiry fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    cursor: pointer;
+}
+.order-enquiry fieldset.is-disabled {
+    border-color: #555555;
+    background-color: #111111;
+}
+.order-enquiry fieldset.is-disabled legend,
+.order-enquiry fieldset.is-disabled label {
+    color: #777777;
+    text-shadow: none;
+    cursor: not-allowed;
+}
+.order-enquiry input[type="radio"],
+.order-enquiry input[type="checkbox"] {
+    accent-color: #02ff02;
+}
+.order-enquiry button {
+    justify-self: start;
+    padding: 0.75rem 1.1rem;
+    border: 1px solid #02ff02;
+    border-radius: 4px;
+    background-color: #0a710a;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 4px #000000;
+    box-shadow: 0 0 10px #02ff024d;
+}
+.order-enquiry button:hover,
+.order-enquiry button:focus-visible {
+    background-color: #02ff02;
+    color: #071407;
+    text-shadow: none;
+}
 @media (max-width: 700px) {
     .game-description {
         padding: 1rem;
