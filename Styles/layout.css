@@ -1,0 +1,126 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background-color: #08810838;
+    border-bottom: 3px solid var(--brand-colour);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #02ff02b9;
+}
+
+nav {
+    flex: 1;
+    width: 100%;
+    text-align: right;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: clamp(1rem, 4vw, 2.5rem);
+    padding: 30px 24px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--white);
+    font-size: clamp(0.8rem, 1.7vw, 1rem);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--brand-colour);
+    border-bottom-color: var(--brand-colour);
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-tagline { flex: 1; }
+
+.shop-tagline h1 {
+    position: relative;
+    padding-top: 15px;
+    padding-left: 15px;
+    color: var(--brand-colour);
+    font-size: 35pt;
+    text-shadow: 0 0 3px var(--brand-colour), 0 0 8px var(--brand-colour), 0 0 16px var(--brand-colour), 0 0 1px var(--white);
+    animation: neon-flicker 4s infinite;
+}
+
+.shop-tagline h1::before,
+.shop-tagline h1::after {
+    position: absolute;
+    inset: 15px 0 0 15px;
+    content: "2D's Game Vault";
+    pointer-events: none;
+    opacity: 0;
+}
+
+.shop-tagline h1::before { color: var(--soft-brand); animation: glitch-lime 4s infinite steps(1); }
+.shop-tagline h1::after { color: #005c31; animation: glitch-emerald 4s infinite steps(1); }
+
+@keyframes neon-flicker {
+    0%, 18%, 22%, 63%, 65%, 72%, 100% { opacity: 1; }
+    20%, 64%, 71% { opacity: 0.86; }
+}
+
+@keyframes glitch-lime {
+    0%, 88%, 92%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0 0 100% 0); }
+    89% { opacity: 0.45; transform: translate(-3px, 1px); clip-path: inset(20% 0 55% 0); }
+    91% { opacity: 0.45; transform: translate(3px, -1px); clip-path: inset(65% 0 15% 0); }
+}
+
+@keyframes glitch-emerald {
+    0%, 89%, 93%, 100% { opacity: 0; transform: translate(0); clip-path: inset(0 0 100% 0); }
+    90% { opacity: 0.45; transform: translate(3px, -1px); clip-path: inset(45% 0 35% 0); }
+    92% { opacity: 0.45; transform: translate(-2px, 1px); clip-path: inset(10% 0 70% 0); }
+}
+
+main {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    color: var(--white);
+    background-color: #08810817;
+    text-align: center;
+    border-radius: 15px;
+    border-top: 3px solid var(--brand-colour);
+    box-shadow: 0 -4px 15px #02ff02b9;
+    text-shadow: 0 0 5px #02ff02ab;
+    font-size: 12pt;
+}
+
+@media (max-width: 700px) {
+    header { flex-direction: column; gap: 0.25rem; padding-top: 0.5rem; }
+    .shop-tagline, nav { width: 100%; text-align: center; }
+    .shop-tagline h1 { padding: 0.35rem 0.75rem 0; font-size: clamp(1.7rem, 9vw, 2.2rem); line-height: 1.15; }
+    .description { padding: 0.5rem 0.75rem; font-size: clamp(0.8rem, 4vw, 1rem); line-height: 1.4; }
+    nav ul { justify-content: center; gap: clamp(1rem, 8vw, 2rem); padding: 0.75rem 0.5rem 1rem; }
+    nav a { font-size: clamp(0.75rem, 3.5vw, 0.95rem); }
+    footer { font-size: 0.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .shop-tagline h1,
+    .shop-tagline h1::before,
+    .shop-tagline h1::after { animation: none; }
+}

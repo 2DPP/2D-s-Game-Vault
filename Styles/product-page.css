@@ -1,0 +1,106 @@
+main > h1,
+.game-description,
+main h2,
+main table,
+.order-enquiry { width: min(92%, 900px); }
+
+main > h1 {
+    margin: 0.75rem 0 1rem;
+    padding: 0.7rem 1.25rem;
+    background: linear-gradient(90deg, #075807, #0d210d 55%, #075807);
+    border: 1px solid var(--brand-colour);
+    border-radius: 8px;
+    color: var(--white);
+    font-size: clamp(1.35rem, 4vw, 2.25rem);
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-shadow: 0 0 8px var(--brand-colour);
+    box-shadow: 0 0 14px #02ff0259;
+}
+
+.game-description {
+    max-width: 820px;
+    margin-bottom: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background-color: #0b260bd9;
+    border-right: 3px solid var(--brand-colour);
+    border-left: 3px solid var(--brand-colour);
+    border-radius: 6px;
+    color: #f2fff2;
+    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+    line-height: 1.7;
+    text-align: left;
+    text-shadow: 0 1px 2px var(--dark-ink);
+    box-shadow: 0 0 18px #02ff0233;
+}
+
+main h2 {
+    max-width: 900px;
+    padding: 0.65rem 1rem;
+    border-top: 1px solid var(--brand-colour);
+    border-bottom: 1px solid var(--brand-colour);
+    color: var(--white);
+    font-size: clamp(1rem, 2.5vw, 1.45rem);
+    line-height: 1.35;
+    text-align: center;
+    text-shadow: 0 0 7px var(--brand-colour);
+}
+
+main table {
+    max-width: 900px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: clamp(0.72rem, 1.45vw, 0.95rem);
+}
+
+main th,
+main td {
+    width: 41%;
+    padding: clamp(0.65rem, 2vw, 1.15rem);
+    border: 1px solid #021d02;
+    overflow-wrap: anywhere;
+    vertical-align: top;
+}
+
+main th:first-child,
+main td:first-child { width: 18%; }
+main th { background-color: #0a710ad5; text-align: center; text-shadow: 0 0 5px var(--brand-colour); }
+main td { background-color: #094609ae; }
+
+.order-enquiry {
+    max-width: 900px;
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem 1.5rem;
+    background: linear-gradient(135deg, #0b260b, #061106 70%);
+    border: 1px solid var(--brand-colour);
+    border-radius: 8px;
+    box-shadow: 0 0 18px #02ff0233, inset 0 0 24px #02ff0214;
+}
+
+.order-enquiry h2 { width: 100%; margin-bottom: 1rem; }
+.order-enquiry form { display: grid; gap: 1rem; }
+.form-field { display: grid; gap: 0.4rem; }
+.form-field > label,
+.order-enquiry legend { color: var(--soft-brand); font-weight: bold; text-shadow: 0 0 5px var(--brand-colour); }
+.order-enquiry input[type="number"],
+.order-enquiry input[type="email"] { width: 100%; padding: 0.75rem; background-color: #071407; border: 1px solid #0a710a; border-radius: 4px; color: var(--white); font: inherit; }
+.order-enquiry input[type="number"]:focus,
+.order-enquiry input[type="email"]:focus { border-color: var(--brand-colour); box-shadow: 0 0 10px #02ff0266; }
+.order-enquiry fieldset { display: grid; gap: 0.65rem; padding: 0.85rem 1rem 1rem; background-color: #07140780; border: 1px solid #0a710a; }
+.order-enquiry legend { padding: 0 0.35rem; }
+.order-enquiry fieldset label { display: flex; align-items: center; gap: 0.55rem; cursor: pointer; }
+.order-enquiry fieldset.is-disabled { background-color: #111111; border-color: #555555; }
+.order-enquiry fieldset.is-disabled legend,
+.order-enquiry fieldset.is-disabled label { color: #777777; text-shadow: none; cursor: not-allowed; }
+.order-enquiry input[type="radio"],
+.order-enquiry input[type="checkbox"] { accent-color: var(--brand-colour); }
+.order-enquiry button { justify-self: start; padding: 0.75rem 1.1rem; background-color: #0a710a; border: 1px solid var(--brand-colour); border-radius: 4px; color: var(--white); font: inherit; font-weight: bold; cursor: pointer; text-shadow: 0 0 4px var(--dark-ink); box-shadow: 0 0 10px #02ff024d; }
+.order-enquiry button:hover,
+.order-enquiry button:focus-visible { background-color: var(--brand-colour); color: var(--dark-ink); text-shadow: none; }
+
+@media (max-width: 700px) {
+    .game-description { padding: 1rem; font-size: 0.82rem; line-height: 1.65; }
+    main table { font-size: 0.68rem; line-height: 1.4; }
+    main th, main td { padding: 0.55rem 0.4rem; }
+}
