@@ -14,6 +14,7 @@
 
 :root {
     --brand-colour: #02ff02;
+    --brand: var(--brand-colour);
     --dark-ink: #101010;
     --muted-grey: #8c8c8c;
     --light-background: #1a1a1a;
