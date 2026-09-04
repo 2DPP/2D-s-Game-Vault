@@ -66,6 +66,7 @@ nav a:hover {
     opacity: 0;
 }
 
+/* for animated glitch fx of the shop name */
 .shop-tagline h1::before { color: var(--soft-brand); animation: glitch-lime 4s infinite steps(1); }
 .shop-tagline h1::after { color: #005c31; animation: glitch-emerald 4s infinite steps(1); }
 
