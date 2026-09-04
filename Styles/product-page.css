@@ -74,6 +74,14 @@ main td:first-child { width: 18%; }
 main th { background-color: #0a710ad5; text-align: center; text-shadow: 0 0 5px var(--brand-colour); }
 main td { background-color: #094609ae; }
 
+/*image rule to override rules from base.css specifically for the product page */
+img { 
+    width: 100%; height: auto; 
+    border-radius:0px;
+    box-shadow: 0 0 15px #02ff02b9;
+    margin-bottom: 1.25rem;
+ }
+
 .order-enquiry {
     max-width: 900px;
     margin-top: 1.5rem;
