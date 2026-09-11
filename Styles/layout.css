@@ -99,6 +99,17 @@ main {
     justify-content: center;
 }
 
+.product-grid {
+    display: flex;
+    width: 95%;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 900px) {
+    .product-grid { flex-direction: row; }
+}
+
 section {
     margin-top: 20px;
     margin-bottom: 20px;

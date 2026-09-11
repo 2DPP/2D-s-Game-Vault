@@ -16,10 +16,15 @@ article p,
 article h3 { padding: 10px; }
 
 .product-card {
-    margin-bottom: 20px;
+    width: 100%;
+    margin: 0;
     padding: 20px;
     background-color: #001f0775;
     border-left: 4px solid var(--brand);
+}
+
+@media (min-width: 900px) {
+    .product-card { flex: 1 1 0; }
 }
 
 .product-card h3 {
