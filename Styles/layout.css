@@ -3,35 +3,31 @@
   /* This is the layout stylesheet for header, nav, main, footer, sections */
   
 /*``````````````````````````````````````````````````````````````````````````````````````````````````````````````` */
-header {
+.site-header {
     position: sticky;
     top: 0;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1rem;
     background-color: #08810838;
     border-bottom: 3px solid var(--brand-colour);
     border-radius: 15px;
     box-shadow: 0 4px 15px #02ff02b9;
 }
 
-nav {
-    flex: 1;
-    width: 100%;
+.site-header nav {
     text-align: right;
 }
 
-nav ul {
+.site-header nav ul {
     display: flex;
-    justify-content: flex-end;
-    gap: clamp(1rem, 4vw, 2.5rem);
+    gap: 20px;
     padding: 30px 24px;
     list-style: none;
 }
 
-nav a {
+.site-header nav a {
     color: var(--white);
     font-size: clamp(0.8rem, 1.7vw, 1rem);
     font-weight: bold;
@@ -39,13 +35,11 @@ nav a {
     border-bottom: 2px solid transparent;
 }
 
-nav a:hover {
+.site-header nav a:hover {
     color: var(--brand-colour);
     border-bottom-color: var(--brand-colour);
     transition: all 0.3s ease-in-out;
 }
-
-.shop-tagline { flex: 1; }
 
 .shop-tagline h1 {
     position: relative;
@@ -97,6 +91,14 @@ main {
     justify-content: center;
 }
 
+.centered-heading {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+}
+
 section {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -116,12 +118,11 @@ footer {
 }
 
 @media (max-width: 700px) {
-    header { flex-direction: column; gap: 0.25rem; padding-top: 0.5rem; }
-    .shop-tagline, nav { width: 100%; text-align: center; }
+    .site-header { padding-top: 0.5rem; }
     .shop-tagline h1 { padding: 0.35rem 0.75rem 0; font-size: clamp(1.7rem, 9vw, 2.2rem); line-height: 1.15; }
     .description { padding: 0.5rem 0.75rem; font-size: clamp(0.8rem, 4vw, 1rem); line-height: 1.4; }
-    nav ul { justify-content: center; gap: clamp(1rem, 8vw, 2rem); padding: 0.75rem 0.5rem 1rem; }
-    nav a { font-size: clamp(0.75rem, 3.5vw, 0.95rem); }
+    .site-header nav ul { gap: 12px; padding: 0.75rem 0.5rem 1rem; }
+    .site-header nav a { font-size: clamp(0.75rem, 3.5vw, 0.95rem); }
     footer { font-size: 0.75rem; }
 }
 
