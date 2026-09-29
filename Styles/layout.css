@@ -1,7 +1,104 @@
 
 /*``````````````````````````````````````````````````````````````````````````````````````````````````````````````` */  
   /* This is the layout stylesheet for header, nav, main, footer, sections */
-  
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 0px;
+    grid-template-areas:
+        "masthead masthead"
+        "main     side"
+        "foot     foot";
+    gap: 16px;
+    padding: 16px;
+}
+
+.site-header { grid-area: masthead; }
+aside { grid-area: side; }
+main { grid-area: main; min-width: 0; }
+footer { grid-area: foot; }
+
+.sidebar-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar-toggle-button {
+    position: fixed;
+    top: 190px;
+    left: 16px;
+    z-index: 11;
+    padding: 8px 12px;
+    color: var(--brand-colour);
+    background-color: #001f07;
+    border: 1px solid var(--brand-colour);
+    border-radius: 4px;
+    box-shadow: 0 0 10px #02ff0266;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.sidebar-toggle-button:hover {
+    color: var(--dark-ink);
+    background-color: var(--brand-colour);
+}
+
+aside {
+    position: fixed;
+    top: 230px;
+    left: 16px;
+    z-index: 10;
+    width: 220px;
+    max-height: calc(100vh - 246px);
+    overflow-y: auto;
+    padding: 20px 14px;
+    transform: translateX(calc(-100% - 24px));
+    transition: transform 0.25s ease-in-out;
+    border-left: 4px solid var(--brand-colour);
+    border-radius: 0 8px 8px 0;
+    background-color: #001f07f2;
+    box-shadow: 0 0 18px #02ff0266;
+}
+
+.sidebar-toggle:checked ~ aside {
+    transform: translateX(0);
+}
+
+aside h2 {
+    margin-bottom: 10px;
+    color: var(--brand-colour);
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #02ff0266;
+}
+
+aside ul {
+    padding: 0;
+    list-style: none;
+}
+
+aside li {
+    margin-bottom: 2px;
+}
+
+aside a {
+    display: block;
+    padding: 7px 8px;
+    color: var(--white);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+}
+
+aside a:hover {
+    color: var(--brand-colour);
+    background-color: #08810817;
+    border-left-color: var(--brand-colour);
+}
+
 /*``````````````````````````````````````````````````````````````````````````````````````````````````````````````` */
 .site-header {
     position: sticky;
@@ -129,6 +226,25 @@ footer {
 }
 
 @media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "masthead"
+            "main"
+            "foot";
+        padding: 8px;
+    }
+
+    aside {
+        top: 220px;
+        left: 8px;
+        width: min(220px, calc(100vw - 16px));
+        max-height: calc(100vh - 236px);
+        padding: 14px;
+    }
+
+    .sidebar-toggle-button { top: 190px; left: 8px; }
+
     .site-header {
         flex-direction: column;
         align-items: stretch;
