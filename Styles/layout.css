@@ -4,13 +4,14 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr 0px;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "masthead masthead"
-        "main     side"
-        "foot     foot";
+        "masthead"
+        "main"
+        "side"
+        "foot";
     gap: 16px;
-    padding: 16px;
+    padding: 8px;
 }
 
 .site-header { grid-area: masthead; }
@@ -106,7 +107,10 @@ aside a:hover {
     z-index: 10;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 0.25rem;
+    padding-top: 0.5rem;
     background-color: #08810838;
     border-bottom: 3px solid var(--brand-colour);
     border-radius: 15px;
@@ -141,9 +145,10 @@ aside a:hover {
 .shop-tagline h1 {
     position: relative;
     padding-top: 15px;
-    padding-left: 15px;
+    padding: 0.35rem 0.75rem 0;
     color: var(--brand-colour);
-    font-size: 35pt;
+    font-size: clamp(1.7rem, 9vw, 2.2rem);
+    line-height: 1.15;
     text-shadow: 0 0 3px var(--brand-colour), 0 0 8px var(--brand-colour), 0 0 16px var(--brand-colour), 0 0 1px var(--white);
     animation: neon-flicker 4s infinite;
 }
@@ -197,14 +202,10 @@ main {
 }
 
 .product-grid {
-    display: flex;
+    display: grid;
     width: 95%;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 24px;
-}
-
-@media (min-width: 900px) {
-    .product-grid { flex-direction: row; }
 }
 
 section {
@@ -225,55 +226,64 @@ footer {
     font-size: 12pt;
 }
 
-@media (max-width: 700px) {
+@media (min-width: 700px) {
     body {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 0px;
         grid-template-areas:
-            "masthead"
-            "main"
-            "foot";
-        padding: 8px;
+            "masthead masthead"
+            "main     side"
+            "foot     foot";
+        padding: 16px;
     }
-
-    aside {
-        top: 220px;
-        left: 8px;
-        width: min(220px, calc(100vw - 16px));
-        max-height: calc(100vh - 236px);
-        padding: 14px;
-    }
-
-    .sidebar-toggle-button { top: 190px; left: 8px; }
 
     .site-header {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0.25rem;
-        padding-top: 0.5rem;
+        flex-direction: row;
+        align-items: center;
+        padding-top: 0;
     }
 
     .shop-tagline {
-        width: 100%;
-        text-align: center;
+        text-align: left;
     }
 
     .shop-tagline h1 {
-        padding: 0.35rem 0.75rem 0;
-        font-size: clamp(1.7rem, 9vw, 2.2rem);
-        line-height: 1.15;
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 35pt;
     }
 
-    .description { padding: 0.5rem 0.75rem; font-size: clamp(0.8rem, 4vw, 1rem); line-height: 1.4; }
-
-    .site-header nav { text-align: center; }
-    .site-header nav ul {
-        justify-content: center;
-        gap: clamp(0.6rem, 5vw, 1.25rem);
-        padding: 0.5rem 0.5rem 1rem;
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
 
-    .site-header nav a { font-size: clamp(0.75rem, 3.5vw, 0.95rem); }
-    footer { font-size: 0.75rem; }
+    aside {
+        top: 230px;
+        left: 16px;
+        width: 220px;
+        max-height: calc(100vh - 246px);
+        padding: 20px 14px;
+    }
+
+    .sidebar-toggle-button { top: 190px; left: 16px; }
+}
+
+.shop-tagline { width: 100%; }
+.description { padding: 0.5rem 0.75rem; font-size: clamp(0.8rem, 4vw, 1rem); line-height: 1.4; }
+.site-header nav { text-align: center; }
+.site-header nav ul {
+    justify-content: center;
+    gap: clamp(0.6rem, 5vw, 1.25rem);
+    padding: 0.5rem 0.5rem 1rem;
+}
+.site-header nav a { font-size: clamp(0.75rem, 3.5vw, 0.95rem); }
+footer { font-size: 0.75rem; }
+
+@media (min-width: 700px) {
+    .description { padding: 20px; font-size: 15pt; }
+    .site-header nav { text-align: right; }
+    .site-header nav ul { padding: 30px 24px; }
+    .site-header nav a { font-size: clamp(0.8rem, 1.7vw, 1rem); }
+    footer { font-size: 12pt; }
 }
 
 @media (prefers-reduced-motion: reduce) {

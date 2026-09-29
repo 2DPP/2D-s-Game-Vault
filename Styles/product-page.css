@@ -28,14 +28,14 @@ main > h1 {
 .game-description {
     max-width: 820px;
     margin-bottom: 1.25rem;
-    padding: 1.25rem 1.5rem;
+    padding: 1rem;
     background-color: #0b260bd9;
     border-right: 3px solid var(--brand-colour);
     border-left: 3px solid var(--brand-colour);
     border-radius: 6px;
     color: #f2fff2;
-    font-size: clamp(0.9rem, 1.6vw, 1.05rem);
-    line-height: 1.7;
+    font-size: 0.82rem;
+    line-height: 1.65;
     text-align: left;
     text-shadow: 0 1px 2px var(--dark-ink);
     box-shadow: 0 0 18px #02ff0233;
@@ -57,13 +57,13 @@ main table {
     max-width: 900px;
     table-layout: fixed;
     border-collapse: collapse;
-    font-size: clamp(0.72rem, 1.45vw, 0.95rem);
+    font-size: 0.68rem;
 }
 
 main th,
 main td {
     width: 41%;
-    padding: clamp(0.65rem, 2vw, 1.15rem);
+    padding: 0.55rem 0.4rem;
     border: 1px solid #021d02;
     overflow-wrap: anywhere;
     vertical-align: top;
@@ -113,8 +113,8 @@ img {
 .order-enquiry button:hover,
 .order-enquiry button:focus-visible { background-color: var(--brand-colour); color: var(--dark-ink); text-shadow: none; }
 
-@media (max-width: 700px) {
-    .game-description { padding: 1rem; font-size: 0.82rem; line-height: 1.65; }
-    main table { font-size: 0.68rem; line-height: 1.4; }
-    main th, main td { padding: 0.55rem 0.4rem; }
+@media (min-width: 700px) {
+    .game-description { padding: 1.25rem 1.5rem; font-size: clamp(0.9rem, 1.6vw, 1.05rem); line-height: 1.7; }
+    main table { font-size: clamp(0.72rem, 1.45vw, 0.95rem); line-height: normal; }
+    main th, main td { padding: clamp(0.65rem, 2vw, 1.15rem); }
 }
