@@ -1,7 +1,6 @@
 const shopName = "2D's Game Vault";
 const currentYear = new Date().getFullYear();
 let runningTotal = 0;
-const stockCount = 8;
 const isMember = true;
 const shopIsOpen = true;
 
@@ -35,8 +34,14 @@ if (subtotalElement) {
     subtotalElement.textContent = `Product subtotal: ₱${runningTotal.toLocaleString()}`;
 }
 
-const stockStatusElement = document.getElementById('stock-status');
-if (stockStatusElement) {
+productCards.forEach((productCard) => {
+    const stockStatusElement = productCard.querySelector('.stock-status span');
+    const stockCount = Number(productCard.dataset.stock);
+
+    if (!stockStatusElement) {
+        return;
+    }
+
     if (stockCount > 10) {
         stockStatusElement.textContent = 'In stock';
     } else if (stockCount >= 1) {
@@ -46,7 +51,7 @@ if (stockStatusElement) {
     } else {
         stockStatusElement.textContent = 'Stock unavailable';
     }
-}
+});
 
 const orderTotal = runningTotal;
 const qualifiesForFreeDelivery = orderTotal >= 3000 && isMember;
@@ -65,6 +70,6 @@ if (shopStatusElement) {
 console.log('shop name:', shopName);
 console.log('current year:', currentYear);
 console.log('running total:', runningTotal);
-console.log('stock status:', stockCount);
+console.log('product stock counts:', Array.from(productCards, (productCard) => Number(productCard.dataset.stock)));
 console.log('final total:', finalTotal);
 console.log('shop status:', shopIsOpen);

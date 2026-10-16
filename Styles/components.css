@@ -32,6 +32,34 @@ article h3 { padding: 10px; }
     font-size: 20pt;
 }
 
+.stock-status {
+    margin: 0 0 10px;
+    color: var(--brand-colour);
+    font-weight: bold;
+}
+
+.shop-summary {
+    width: min(95%, 720px);
+    margin: 24px auto 0;
+    padding: 12px 20px;
+    border: 1px solid var(--brand-colour);
+    border-radius: 10px;
+    background-color: #001f0775;
+    box-shadow: 0 0 12px #02ff0266;
+    text-align: center;
+}
+
+.shop-summary h2 {
+    margin: 0;
+    color: var(--brand-colour);
+    font-size: 1.35rem;
+    text-align: center;
+}
+
+.shop-summary .description {
+    margin: 8px 0;
+}
+
 main:has(> section:only-child) {
     height: 100%;
     margin-top: 40px;
