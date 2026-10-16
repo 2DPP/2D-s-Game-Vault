@@ -15,7 +15,7 @@
 </head>
 <body>
     <header class="site-header">
-   <div class="shop-tagline">  <h1>2D's Game Vault</h1>
+   <div class="shop-tagline">  <h1 id="shop-name">2D's Game Vault</h1>
 <p class="description">Games to play and enjoy! <b>Buy now!</b></p>
 </div>
     <nav>
@@ -45,6 +45,7 @@
  
 <main>
 <h2 class="centered-heading" style="color: var(--brand-colour)">Game Products:</h2>
+<p class="description">Available titles: <span id="product-count"></span></p>
 
 <div class="product-grid">
 <article class="product-card">
@@ -71,11 +72,16 @@
     <img src="Images/FFXV.jpg" alt="Final Fantasy XV main menu">
 </article>
 </div>
+<p class="description" id="product-subtotal"></p>
+<p class="description">Resident Evil 5 stock: <span id="stock-status"></span></p>
+<p class="description" id="delivery-total"></p>
+<p class="description">Shop status: <span id="shop-status"></span></p>
 </main>
 
 <footer>
-    <p>&copy; 2026 2D's Game Vault. All rights reserved.</p>
+    <p id="copyright">&copy; 2026 2D's Game Vault. All rights reserved.</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
